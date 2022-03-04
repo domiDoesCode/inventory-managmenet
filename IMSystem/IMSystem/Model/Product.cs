@@ -12,11 +12,6 @@ namespace IMSystem.Model
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public Product(int _id)
-        {
-            this.Id = _id;
-        }
-
         public Product(int _id, string _name, string _description)
         {
             this.Id = _id;

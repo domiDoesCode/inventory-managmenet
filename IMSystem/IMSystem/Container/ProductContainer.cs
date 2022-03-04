@@ -10,15 +10,17 @@ namespace IMSystem.Container
     public class ProductContainer
     {
         public List<Product> products;
-
+        Product product;
 
         public ProductContainer()
         {
             products = new List<Product>();
+            
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(int id,string name, string description)
         {
+            product = new Product(id, name, description);
             if (products.Contains(product))
             {
 
@@ -30,9 +32,9 @@ namespace IMSystem.Container
                 Console.WriteLine("The product " + product.Name + " has been added to the system.");
             }
         }
-        public void RemoveProduct(Product product)
+        public void RemoveProduct(int id)
         {
-            if (products.Contains(product))
+            if (products.Contains(product) && product.Id == id)
             {
                 products.Remove(product);
                 Console.WriteLine("The product " + product.Name + " has been removed.");

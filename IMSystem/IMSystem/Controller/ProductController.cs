@@ -16,19 +16,19 @@ namespace IMSystem.Controller
         {
             productContainer = new ProductContainer();
         }
-        public void AddProduct(Product product)
+        public void AddProduct(int id, string name, string description)
         {
-            productContainer.AddProduct(product);
+            productContainer.AddProduct(id, name, description);
         }
-        public void RemoveProduct(Product product)
+        public void RemoveProduct(int id)
         {
-            productContainer.RemoveProduct(product);
+            productContainer.RemoveProduct(id);
         }
         public void FindProduct(int id)
         {
             productContainer.FindProduct(id);
         }
-        public void PritnProducts()
+        public void PrintProducts()
         {
             productContainer.PrintAllProducts();
         }
